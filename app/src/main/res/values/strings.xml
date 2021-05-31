@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SantanderDevWeek</string>
+    <string name="menu_1">Menu 1</string>
+    <string name="menu_2">Menu 2</string>
+    <string name="menu_1_text">Menu 1 selecionado</string>
+    <string name="menu_2_text">Menu 2 selecionado</string>
+    <string name="welcome_client">Olá, Rubens</string>
+    <string name="account_agency">Ag 1105</string>
+    <string name="account_number">Cc 01018871–4</string>
+    <string name="card_client">card_client</string>
+    <string name="saldo_client">Saldo disponível</string>
+</resources>
