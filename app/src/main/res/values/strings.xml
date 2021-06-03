@@ -9,4 +9,17 @@
     <string name="account_number">Cc 01018871–4</string>
     <string name="card_client">card_client</string>
     <string name="saldo_client">Saldo disponível</string>
+    <string name="saldo_limite">Saldo + Limite:</string>
+    <string name="ver_extrato">Ver extrato</string>
+    <string name="pagar">Pagar</string>
+    <string name="emprestimo">Emprestimo</string>
+    <string name="recarga">Recarga</string>
+    <string name="imagem_saldo">imagem saldo</string>
+    <string name="imagem_expandir">imagem expandir</string>
+    <string name="valor_exemplo">R$ 345,00</string>
+    <string name="valor_exemplo_2">R$ 23.890,00</string>
+    <string name="imagem_pagar">imagem pagar</string>
+    <string name="imagem_emprestimo">imagem emprestimo</string>
+    <string name="imagem_recarga">imagem recarga</string>
+    <string name="transferir">Transferir</string>
 </resources>
