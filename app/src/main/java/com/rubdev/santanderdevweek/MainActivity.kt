@@ -32,16 +32,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
        return when(item.itemId){
-           R.id.item_1 -> {
+           R.id.menu_1 -> {
 //               binding.tvTexto.text = getString(R.string.menu_1_text)
                Log.d("CLICK", "Menu 1 selecionado")
                 true
            }
-           R.id.item_2 -> {
-//               binding.tvTexto.text = getString(R.string.menu_2_text)
-               Log.d("CLICK", "Menu 2 selecionado")
-               true
-           }
+//           R.id.item_2 -> {
+////               binding.tvTexto.text = getString(R.string.menu_2_text)
+//               Log.d("CLICK", "Menu 2 selecionado")
+//               true
+//           }
            else -> super.onOptionsItemSelected(item)
        }
 
