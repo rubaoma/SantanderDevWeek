@@ -1,15 +1,18 @@
-package com.rubdev.santanderdevweek
+package com.rubdev.santanderdevweek.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.lifecycle.ViewModelProvider
+import com.rubdev.santanderdevweek.R
 import com.rubdev.santanderdevweek.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var mainViewModel: MainViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
         setSupportActionBar(findViewById(R.id.toolbar))
 
