@@ -7,14 +7,14 @@ import com.rubdev.santanderdevweek.data.Conta
 class FakeData {
 
     fun getLocalData(): Conta {
-        val cliente = Cliente("Rubens Moura")
-        val cartao = Cartao("3456123467894567")
+        val cliente = Cliente("Olá, Rubens")
+        val cartao = Cartao("4567")
 
       return Conta(
-            "456734-5",
-            "1234",
-            "23000",
-            "30000",
+            "Cc 456734-5",
+            "Ag 1234",
+            "R$ 23.000,00",
+            "R$ 30.000,00",
             cliente,
             cartao
         )
