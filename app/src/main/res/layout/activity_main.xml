@@ -120,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="@string/valor_exemplo"
+                android:text="@string/saldo_conta"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -142,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="@string/valor_exemplo_2"
+                android:text="@string/valor_limite"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="@id/tv_saldo_limite_label"
@@ -296,7 +296,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/redPrimary"
-        />
+        android:contentDescription="@string/cartao" />
 
     <TextView
         android:id="@+id/tv_cartao_final"

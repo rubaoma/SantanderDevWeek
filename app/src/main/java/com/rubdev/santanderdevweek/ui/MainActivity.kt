@@ -1,15 +1,13 @@
 package com.rubdev.santanderdevweek.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import androidx.lifecycle.Observer
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.rubdev.santanderdevweek.R
+import com.rubdev.santanderdevweek.data.Conta
 import com.rubdev.santanderdevweek.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -26,22 +24,44 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
         initBinding()
 
-
     }
 
     private fun initBinding() {
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        searchClientAccount()
+    }
+
+    private fun searchClientAccount(){
         mainViewModel.buscarContaCliente().observe(this, { result ->
-            Log.d("Agencia", result.agencia)
-            binding.apply {
-                tvAgencia.text = result.agencia
-                tvConta.text = result.numero
-                tvSaldo.text = result.saldo
-                tvSaldoLimite.text = result.limite
-                tvUsuario.text = result.cliente.nome
-                tvCartaoFinalNumero.text = result.cartao.numeroConta
-            }
+            bindOnView(result)
         })
+    }
+
+    private fun bindOnView(conta: Conta) {
+        val clientName = setTextField(conta.cliente.nome, R.string.welcome_client)
+        val agency = setTextField(conta.agencia, R.string.account_agency)
+        val acountNumber = setTextField(conta.numero, R.string.account_number)
+        val balance = setTextField(conta.saldo, R.string.saldo_conta)
+        val limit = setTextField(conta.limite, R.string.valor_limite)
+        val finalNumberCard = setTextField(conta.cartao.numeroConta, R.string.cartao_number_example)
+
+        binding.apply {
+            tvAgencia.text = agency
+            tvConta.text = acountNumber
+            tvSaldo.text = balance
+            tvSaldoLimite.text = limit
+            tvUsuario.text = clientName
+            tvCartaoFinalNumero.text = finalNumberCard
+//                tvCartaoFinalNumero.setTextSize(TypedValue.COMPLEX_UNIT_SP,24F)
+        }
+    }
+
+
+    private fun setTextField(text: String, stringFont:Int): String {
+        return getString(
+            stringFont,
+            text
+        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
