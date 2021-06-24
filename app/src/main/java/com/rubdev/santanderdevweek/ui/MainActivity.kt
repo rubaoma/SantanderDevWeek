@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
         initBinding()
 
+//        throw RuntimeException("Test crash")
+
     }
 
     private fun initBinding() {
